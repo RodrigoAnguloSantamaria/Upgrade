@@ -1,0 +1,30 @@
+ANSWER 1
+
+function rangeOfNumbers(startNum, endNum) {
+  if (endNum < startNum){
+    return[];
+  }
+  else{
+    const array=rangeOfNumbers(startNum, endNum -1);
+    array.push(endNum);  
+    return array;
+  }
+  
+  
+  
+};
+
+--------------------------------------------------------------------
+--------------------------------------------------------------------
+
+ANSWER 2
+
+function rangeOfNumbers(startNum, endNum) {
+      if (startNum == endNum){
+              return [endNum];
+      } else {
+              const arr = rangeOfNumbers(startNum + 1, endNum);
+              arr.unshift(startNum);
+              return arr;
+     }
+};
